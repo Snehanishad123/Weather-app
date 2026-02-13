@@ -1,0 +1,172 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+body {
+   /* Deep Blueish-Purple Background (ScreenShot se match) */
+   background: #0d1a3c; 
+}
+
+/* Flexbox setup to center the card */
+.full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+   /* Modern Blue Gradient for the Card */
+   background: linear-gradient(118deg, #4fa3ff, #1c4e8f); 
+   display: flex;
+   height: 500px;
+   width: 400px;
+   border-radius: 20px;
+   flex-direction: column;
+   padding: 20px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.head {
+   display: block;
+   margin-top: 3px;
+   text-align: center;
+   color: #fff;
+}
+
+/* CONTAINER for both search items */
+.container {
+   display: flex;
+   flex-direction: column; /* Inputs ko ek ke niche ek rakha */
+   align-items: center; /* Center align all items */
+   margin: 20px auto 10px;
+   padding: 0 15px;
+}
+
+/* New: Search Group for City Input and Button */
+.search-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 320px; /* Max width set kiya */
+    position: relative;
+    margin-bottom: 15px; /* State input se space */
+}
+
+/* General Input Styling */
+.container input {
+    /* Style common to both City and State inputs */
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 20px; /* Slightly less rounded than 26px */
+    border: none;
+    background: #ebfffc;
+    color: #555;
+    outline: none;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* State Input specific position */
+#state {
+    width: 100%;
+    max-width: 320px; /* City input jitna hi width */
+    margin: 0;
+}
+
+/* Search Button Positioning */
+.search-group button {
+   background: transparent;
+   position: absolute; /* Button ko input field ke upar rakha */
+   right: 5px;
+   padding: 0;
+   border: 0px;
+   cursor: pointer;
+   height: 30px;
+   width: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 10;
+}
+
+.search-group button i {
+    color: #555;
+    font-size: 18px;
+}
+
+.weather {
+   margin: 20px auto;
+   color: #ebfffc;
+   font-weight: 800;
+   text-align: center;
+}
+
+.weather-icon {
+   width: 120px;
+   height: 120px;
+   display: block;
+   margin: 0 auto 10px;
+   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+}
+
+.temp {
+   margin: 0px auto;
+   font-size: 60px;
+   font-weight: 500;
+}
+
+.city {
+   text-align: center;
+   color: #ebfffc;
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+.details {
+   display: flex;
+   align-items: center;
+   margin-top: 40px;
+   justify-content: space-around;
+   padding: 0px 10px;
+   width: 100%;
+}
+
+.col {
+   display: flex;
+   align-items: center;
+   text-align: center;
+}
+
+.col img {
+   height: 50px;
+   width: 50px;
+   margin-right: 15px;
+}
+
+.col div p:first-child {
+   font-size: 22px;
+   font-weight: bold;
+}
+
+.col div p:last-child {
+   font-size: 14px;
+   color: #c9e8ff;
+   font-weight: normal;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 450px) {
+    .card {
+        width: 90%;
+        margin: 5% auto;
+        height: auto;
+        padding: 15px;
+    }
+    .search-group, #state {
+        max-width: 100%;
+    }
+}
